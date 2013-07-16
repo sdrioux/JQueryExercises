@@ -29,6 +29,13 @@ p {
 	padding-top: 30px;
 }
 
+.content {
+	float: left;
+	width: 60%;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
 .card { /*We seperated out the card class because it's repeated in our nav, body, and right-sidebar. Also, anytime we want to turn something into a card, we can just slap the "card" class onto it now*/
 	margin-left: 10px;
 	box-shadow: 0px 1px 5px grey; /*Box shadows! They're awesome, and modern. Google did this to almost all of their stuff. */
@@ -102,8 +109,28 @@ img.profilepic {
 /*------------- Styles for the main content ---------------*/
 
 .main {
-	width: 60%;
-	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.form {
+padding: 20px;
+width: 50%;
+margin-left: 23%;
+}
+
+.mybutton {
+	padding: 10px;
+	margin: 20px auto 0 auto;
+	width: 100px;
+	display: block;
+}
+
+.error {
+	color: red;
+}
+
+.success {
+	color: green;
 }
 
 h1 {

@@ -93,15 +93,67 @@
 // 	$("div:first").hide();
 // });
 // 35.
-$(document).ready(function(){
-	$(".main.card").click(function(){
-		alert("You clicked this section!");
-		$(".main.card p").append("!");
-	})
+// $(document).ready(function(){
+// 	$(".main.card").click(function(){
+// 		alert("You clicked this section!");
+// 		$(this).clone().insertAfter(this)
+// 		$(".main.card p").append("!");
+// 	})
 
-	$("body").click(function(){
-		$(this).css( "background-color", "#000");
-	})
+// 	$("body").click(function(){
+// 		$(this).css( "background-color", "#000");
+// 	})
 
 	
+// })
+// 39.
+// $(document).ready(function(){
+// 	$(".main.card").click(function(){
+// 		$("body").bind({
+// 			dblclick: function(){
+// 				$('div').toggle();
+// 			}
+// 		})
+// 	});
+// });
+// 40.
+// $(document).ready(function(){
+// 	$('p').mouseenter(function(){
+// 		$(this).css("font-weight", "bold");
+// 	}).mouseleave(function(){
+// 		$(this).css("font-weight", "normal");
+// 	})
+// 	$('p').dblclick(function(){
+// 		$('.nav-item').css("font-weight", "bold");
+// 	})
+// })
+// 41.
+$(document).ready(function(){
+	$('.mybutton').click(function(){
+		reg=/.*@.*\..*/
+		email= $("#email").val()
+		password = $("#password").val()
+		$('.error').remove();
+		$('.success').remove();
+		if(email== ''){
+			$('br.errors').after('<p class="error">You need to input an email!</p>')
+		}
+		else if(email.length < 8){
+			$('br.errors').after('<p class="error">Your email must be at least 8 characters!</p>')
+		}
+		else if(!reg.test(email)){
+			$('br.errors').after('<p class="error">Your email must contain a "@" symbol and a period.</p>')
+		}
+		else if(password== ''){
+			$('br.errors').after('<p class="error">You need to input a password!</p>')
+		}
+		else if(password.length < 8){
+			$('br.errors').after('<p class="error">Your password must be at least 8 characters!</p>')
+		}
+		else{
+			$('br.errors').after('<p class="success">Success!</p>')
+		}
+		return false
+	});
 })
+
